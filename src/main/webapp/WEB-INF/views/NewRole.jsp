@@ -7,12 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>Login</h1>
-
-<form method="POST" action="saveuser">
-	Email:<input type="text" name="email"><br><br>
-	Password:<input type="password" name="password"><br><br>
-	<input type="submit" value="login">
+<h2>New Role</h2>
+<form action="saverole" method="POST">
+	Role Name:<input type="text" name="roleName"><br><br>
+	<input type="submit" value="Add Role">
 </form>
 </body>
 </html>
