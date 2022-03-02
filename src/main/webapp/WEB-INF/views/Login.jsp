@@ -13,6 +13,12 @@
 	Email:<input type="text" name="email"><br><br>
 	Password:<input type="password" name="password"><br><br>
 	<input type="submit" value="login">
+	
 </form>
+${error}${msg}
+<br>
+<a href="signup">New User?</a> | 
+<a href="forgetpassword">ForgetPassword</a>
+
 </body>
 </html>

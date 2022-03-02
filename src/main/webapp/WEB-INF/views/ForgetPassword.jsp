@@ -10,7 +10,8 @@
 <h1>ForgetPassword</h1>
 <form method="POST" action="forgetpassword">
 	Email:<input type="text" name="email"><br><br>
-	<input type="submit" value="submit">
+	<input type="submit" value="Get Me Back">
 </form>
+$
 </body>
 </html>
