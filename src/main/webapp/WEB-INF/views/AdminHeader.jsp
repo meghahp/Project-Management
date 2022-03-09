@@ -1,118 +1,147 @@
-<nav class="navbar header-navbar pcoded-header iscollapsed" header-theme="themelight1" pcoded-header-position="fixed">
-<div class="navbar-wrapper">
-<div class="navbar-logo" logo-theme="theme6">
-<h2>Admin Dashboard</h2>
-<a class="mobile-menu" id="mobile-collapse" href="#!">
-<i class="feather icon-menu icon-toggle-right"></i>
-</a>
-<a class="mobile-options waves-effect waves-light">
-<i class="feather icon-more-horizontal"></i>
-</a>
-</div>
-<div class="navbar-container container-fluid">
-<ul class="nav-left">
-<li class="header-search">
-<div class="main-search morphsearch-search">
-<div class="input-group">
-<span class="input-group-prepend search-close">
-<i class="feather icon-x input-group-text"></i>
-</span>
-<input type="text" class="form-control" placeholder="Enter Keyword">
-<span class="input-group-append search-btn">
-<i class="feather icon-search input-group-text"></i>
-</span>
-</div>
-</div>
-</li>
-<li>
-<a href="#!" onclick="if (!window.__cfRLUnblockHandlers) return false; javascript:toggleFullScreen()" class="waves-effect waves-light">
-<i class="full-screen feather icon-maximize"></i>
-</a>
-</li>
-</ul>
-<ul class="nav-right">
-<li class="header-notification">
-<div class="dropdown-primary dropdown">
-<div class="dropdown-toggle" data-toggle="dropdown">
-<i class="feather icon-bell"></i>
-<span class="badge bg-c-red">5</span>
-</div>
-<ul class="show-notification notification-view dropdown-menu" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
-<li>
-<h6>Notifications</h6>
-<label class="label label-danger">New</label>
-</li>
-<li>
-<div class="media">
-<img class="img-radius" src="jpg/avatar-4.jpg" alt="Generic placeholder image">
-<div class="media-body">
-<h5 class="notification-user">John Doe</h5>
-<p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer elit.</p>
-<span class="notification-time">30 minutes ago</span>
-</div>
-</div>
-</li>
-<li>
-<div class="media">
-<img class="img-radius" src="jpg/avatar-3.jpg" alt="Generic placeholder image">
-<div class="media-body">
-<h5 class="notification-user">Joseph William</h5>
-<p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer elit.</p>
-<span class="notification-time">30 minutes ago</span>
-</div>
-</div>
-</li>
-<li>
-<div class="media">
-<img class="img-radius" src="jpg/avatar-4.jpg" alt="Generic placeholder image">
-<div class="media-body">
-<h5 class="notification-user">Sara Soudein</h5>
-<p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer elit.</p>
-<span class="notification-time">30 minutes ago</span>
-</div>
-</div>
-</li>
-</ul>
-</div>
-</li>
-
-<li class="user-profile header-notification">
-<div class="dropdown-primary dropdown">
-<div class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-<img src="jpg/avatar-4.jpg" class="img-radius" alt="User-Profile-Image">
-<span>John Doe</span>
-<i class="feather icon-chevron-down"></i>
-</div>
-<ul class="show-notification profile-notification dropdown-menu" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
-<li>
-<a href="#!">
-<i class="feather icon-settings"></i> Settings
-</a>
-</li>
-<li>
-<a href="#">
-<i class="feather icon-user"></i> Profile
-</a>
-</li>
-<li>
-<a href="email-inbox.html">
-<i class="feather icon-mail"></i> My Messages
-</a>
-</li>
-<li>
-<a href="auth-lock-screen.html">
-<i class="feather icon-lock"></i> Lock Screen
-</a>
-</li>
-<li>
-<a href="auth-sign-in-social.html">
-<i class="feather icon-log-out"></i> Logout
-</a>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</div>
-</nav>
+<nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 d-flex flex-row pt-5 mt-3">
+        <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+         <!--   <a class="navbar-brand brand-logo" href="index.html">
+          
+            <img src="assets/images/logo.svg" alt="logo">
+          </a>-->
+          <h4>Project Management</h4>
+          <a class="navbar-brand brand-logo-mini" href="index.html"><img src="assets/images/logo-mini.svg" alt="logo"></a>
+        </div>
+        <div class="navbar-menu-wrapper d-flex align-items-stretch">
+          <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+            <span class="mdi mdi-menu"></span>
+          </button>
+          <div class="search-field d-none d-md-block">
+            <form class="d-flex align-items-center h-100" action="#">
+              <div class="input-group">
+                <div class="input-group-prepend bg-transparent">
+                  <i class="input-group-text border-0 mdi mdi-magnify"></i>
+                </div>
+                <input type="text" class="form-control bg-transparent border-0" placeholder="Search projects">
+              </div>
+            </form>
+          </div>
+          <ul class="navbar-nav navbar-nav-right">
+            <li class="nav-item nav-profile dropdown">
+              <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                <div class="nav-profile-img">
+                  <img src="assets/images/faces/face1.jpg" alt="image">
+                  <span class="availability-status online"></span>
+                </div>
+                <div class="nav-profile-text">
+                  <p class="mb-1 text-black" style="color:#000087;">${user.firstName }</p>
+                </div>
+              </a>
+              <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
+                <a class="dropdown-item" href="#" style="color:#000087;">
+                  <i class="mdi mdi-cached me-2 text-success" ></i> Activity Log </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#" style="color:#000087;">
+                  <i class="mdi mdi-logout me-2 text-primary" ></i> Signout </a>
+              </div>
+            </li>
+            <li class="nav-item d-none d-lg-block full-screen-link">
+              <a class="nav-link">
+                <i class="mdi mdi-fullscreen" id="fullscreen-button"></i>
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link count-indicator dropdown-toggle" id="messageDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="mdi mdi-email-outline"></i>
+                <span class="count-symbol bg-warning"></span>
+              </a>
+              <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="messageDropdown">
+                <h6 class="p-3 mb-0">Messages</h6>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <img src="assets/images/faces/face4.jpg" alt="image" class="profile-pic">
+                  </div>
+                  <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                    <h6 class="preview-subject ellipsis mb-1 font-weight-normal">Mark send you a message</h6>
+                    <p class="text-gray mb-0"> 1 Minutes ago </p>
+                  </div>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <img src="assets/images/faces/face2.jpg" alt="image" class="profile-pic">
+                  </div>
+                  <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                    <h6 class="preview-subject ellipsis mb-1 font-weight-normal">Cregh send you a message</h6>
+                    <p class="text-gray mb-0"> 15 Minutes ago </p>
+                  </div>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <img src="assets/images/faces/face3.jpg" alt="image" class="profile-pic">
+                  </div>
+                  <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                    <h6 class="preview-subject ellipsis mb-1 font-weight-normal">Profile picture updated</h6>
+                    <p class="text-gray mb-0"> 18 Minutes ago </p>
+                  </div>
+                </a>
+                <div class="dropdown-divider"></div>
+                <h6 class="p-3 mb-0 text-center">4 new messages</h6>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="mdi mdi-bell-outline"></i>
+                <span class="count-symbol bg-danger"></span>
+              </a>
+              <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
+                <h6 class="p-3 mb-0">Notifications</h6>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <div class="preview-icon bg-success">
+                      <i class="mdi mdi-calendar"></i>
+                    </div>
+                  </div>
+                  <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                    <h6 class="preview-subject font-weight-normal mb-1">Event today</h6>
+                    <p class="text-gray ellipsis mb-0"> Just a reminder that you have an event today </p>
+                  </div>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <div class="preview-icon bg-warning">
+                      <i class="mdi mdi-settings"></i>
+                    </div>
+                  </div>
+                  <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                    <h6 class="preview-subject font-weight-normal mb-1">Settings</h6>
+                    <p class="text-gray ellipsis mb-0"> Update dashboard </p>
+                  </div>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <div class="preview-icon bg-info">
+                      <i class="mdi mdi-link-variant"></i>
+                    </div>
+                  </div>
+                  <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                    <h6 class="preview-subject font-weight-normal mb-1">Launch Admin</h6>
+                    <p class="text-gray ellipsis mb-0"> New admin wow! </p>
+                  </div>
+                </a>
+                <div class="dropdown-divider"></div>
+                <h6 class="p-3 mb-0 text-center">See all notifications</h6>
+              </div>
+            </li>
+            <li class="nav-item nav-logout d-none d-lg-block">
+              
+            </li>
+            <li class="nav-item nav-settings d-none d-lg-block">
+              
+            </li>
+          </ul>
+          <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+            <span class="mdi mdi-menu"></span>
+          </button>
+        </div>
+      </nav>	

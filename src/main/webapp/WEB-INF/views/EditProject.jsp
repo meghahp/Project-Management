@@ -5,16 +5,36 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Edit Project</title>
+<jsp:include page="AllCss.jsp"></jsp:include>
 </head>
 <body>
-<form action="updateproject" method="post">
-		<input type="hidden" value="${project.projectId}" name="projectId" />
-		
-		Title:<input type="text" name="projectTitle" value="${project.projectTitle} "/><br><br>
-		Description:<input type="text" name="description" value="${project.description} "/><br><br>
-		Technology:<input type="text" name="technology" value="${project.technology} "/><br><br>
-		<input type="submit" value="Update Project"/>
-	</form>
+
+<div class="col-md-6 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Default form</h4>
+                    <p class="card-description"> Basic form layout </p>
+                    <form class="forms-sample" action="updateproject" method="post">
+                    
+                      <div class="form-group">
+                        <label for="exampleInputUsername1">Project Title</label>
+                        <input type="text" class="form-control" id="exampleInputUsername1" placeholder="Enter Project Title" value="${project.projectTitle}" name="projectTitle"/>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputUsername1">Description</label>
+                        <input type="text" class="form-control" id="exampleInputUsername1" placeholder="Description" value="${project.description}" name="description"/>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputUsername1">Technology</label>
+                        <input type="text" class="form-control" id="exampleInputUsername1" placeholder="Technology" value="${project.technology}" name="technology"/>
+                      </div>
+                      <input type="hidden" value="${project.projectId}" name="projectId" />
+                      <button type="submit" class="btn btn-gradient-primary me-2">Submit</button>
+                      <button class="btn btn-light" type="reset">Cancel</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
 
 </body>
 </html>

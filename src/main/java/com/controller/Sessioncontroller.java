@@ -1,3 +1,4 @@
+
 package com.controller;
 import javax.servlet.http.HttpSession;
 
@@ -98,6 +99,7 @@ public class Sessioncontroller {
 
 			if (bcryptPasswordEncoder.matches(user.getPassword(), dbUser.getPassword()) == true) {
 				isCorrect = true;
+				session.setAttribute("user", dbUser);
 			}
 		}
 
