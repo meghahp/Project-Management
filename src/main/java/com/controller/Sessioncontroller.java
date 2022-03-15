@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -138,6 +139,12 @@ public class Sessioncontroller {
 		System.out.println(user.getEmail());
 		System.out.println(user.getPassword());
 		return "Login";
+	}
+	
+	@GetMapping("/logout")
+	public String Logout(HttpSession session) {
+		session.invalidate();
+		return "redirect:/login";
 	}
 	
 

@@ -22,7 +22,7 @@ public class ModuleDao {
 
 	}
 	public List<ModuleBean> getAllModule() {
-		List<ModuleBean> module=stmt.query("select m.*,p.projecttitle from projectmodule m,project p where m.projectid=p.projectid",new BeanPropertyRowMapper<ModuleBean>(ModuleBean.class));
+		List<ModuleBean> module=stmt.query("select pm.*,p.projecttitle from projectmodule pm,project p where pm.projectid=p.projectid",new BeanPropertyRowMapper<ModuleBean>(ModuleBean.class));
 		return module;
 		}
 	public void deleteModule(int moduleId) {

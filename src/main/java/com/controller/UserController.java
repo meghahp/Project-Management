@@ -39,7 +39,7 @@ public class UserController {
 		System.out.println(encPassword);
 		user.setPassword(encPassword);
 		userDao.adduser(user);
-		return "redirect:/getallusers";
+		return "redirect:/login";
 	}
 	@GetMapping("/getallusers")
 	public String getAllUsers(Model model)

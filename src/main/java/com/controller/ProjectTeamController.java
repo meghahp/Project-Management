@@ -32,26 +32,32 @@ public class ProjectTeamController {
 		model.addAttribute("users", projectTeamDao.getUsersForProject(projectId));
 		model.addAttribute("project", projectDao.getProjectById(projectId));
 		model.addAttribute("team", projectTeamDao.getTeamMembers(projectId));
-
 		return "AddTeamMember";
 	}
 
 	@PostMapping("/saveteammembers")
 	public String saveTeamMembers(@RequestParam("userId") int userId[], @RequestParam("projectId") int projectId) {
 		System.out.println(projectId);
-		for (int i = 0; i < userId.length; i++) {
+		for (int i = 0;i < userId.length; i++)
+		{
 			System.out.println(userId[i]);
 			projectTeamDao.addTeamMember(projectId, userId[i]);
 		}
 		return "redirect:/viewteam?projectId=" + projectId;
 	}
 
-	@GetMapping("/removemember")
+	@GetMapping("/removemember")	
 	public String removeMember(@RequestParam("projectId") int projectId,@RequestParam("userId") int userId) {
 		projectTeamDao.removeTeamMember(projectId,userId);
 		return "redirect:/viewteam?projectId=" + projectId;
+		
 	}
 
+	@GetMapping("/reassignmember")
+	public String reassignMember(@RequestParam("projectId") int projectId,@RequestParam("userId") int userId) {
+		projectTeamDao.reassignTeamMember(projectId,userId);
+		return "redirect:/viewteam?projectId=" + projectId;
+	}
 	
 	
 	

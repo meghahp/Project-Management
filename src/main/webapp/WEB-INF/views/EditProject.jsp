@@ -8,8 +8,10 @@
 <jsp:include page="AllCss.jsp"></jsp:include>
 </head>
 <body>
-
+<jsp:include page="AdminHeader.jsp"></jsp:include>
 <div class="col-md-6 grid-margin stretch-card">
+	<jsp:include page="AdminSideBar.jsp"></jsp:include>
+	
                 <div class="card">
                   <div class="card-body">
                     <h4 class="card-title">Default form</h4>

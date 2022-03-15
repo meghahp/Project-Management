@@ -56,14 +56,10 @@ public class ProjectController {
 		System.out.println(project.getProjectId());
 		model.addAttribute("project", project);
 		return "EditProject";
-
 	}
-	
 	@PostMapping("/updateproject")
 	public String updateProject(ProjectBean project) {
 		projectDao.updateProject(project);
 		return "redirect:/listproject";
 	}
-	
-	
 }

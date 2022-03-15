@@ -1,3 +1,4 @@
+<%@page import="ch.qos.logback.core.recovery.ResilientSyslogOutputStream"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -11,18 +12,21 @@
 
 </head>
 <body>
+<jsp:include page="AdminHeader.jsp"></jsp:include>
+<jsp:include page="AdminSideBar.jsp"></jsp:include>
+
 <div class="card">
 
                   <div class="card-body">
+                  
                     <h4 class="card-title">Basic form elements</h4>
                     <p class="card-description"> Basic form elements </p>
                     <form class="forms-sample" action="saveteammembers" method="post">
                       <div class="form-group">
+                      
                         <label for="exampleInputName1">Project Title</label>
                         <input type="text" class="form-control" id="exampleInputName1" readonly="readonly"value="${project.projectTitle}">
                       </div>
-                      <jsp:include page="AdminHeader.jsp"></jsp:include>
-                  
                       <div class="form-group">
                         <label for="exampleInputEmail3">Technology</label>
                         <input type="text" class="form-control" id="exampleInputEmail3" readonly="readonly"value="${project.technology}">
@@ -45,8 +49,7 @@
       						</select>
                         <!--  <input type="text" class="form-control" id="exampleInputPassword4" readonly="readonly" placeholder="Password">-->
                       </div>
-                      <input type="hidden" name="projectId" value="${project.projectId}">
-                      
+                      <input type="hidden" name="projectId" value="${project.projectId}">                      
                      <button type="submit" class="btn btn-gradient-primary me-2">Submit</button>
                       <button class="btn btn-light" type="reset">Cancel</button>
                     </form>

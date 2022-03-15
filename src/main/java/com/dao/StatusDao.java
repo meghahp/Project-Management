@@ -37,5 +37,6 @@ public class StatusDao {
 	public void updateStatus(StatusBean status) {
 		stmt.update("update status set statusname = ? where statusid = ? ", status.getStatusName(), status.getStatusId());
 	}
+	
 
 }

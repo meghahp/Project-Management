@@ -8,16 +8,18 @@
 <jsp:include page="AllCss.jsp"></jsp:include>
 </head>
 <body>
-	
+		<jsp:include page="AdminHeader.jsp"></jsp:include>
+
 <div class="col-md-6 grid-margin stretch-card">
+                    <jsp:include page="AdminSideBar.jsp"></jsp:include>
+
                 <div class="card">
                   <div class="card-body">
-                  <jsp:include page="AdminHeader.jsp"></jsp:include>
                     <h4 class="card-title">Default form</h4>
                     <p class="card-description"> Basic form layout </p>
                     
                     <form class="forms-sample" action="updaterole" method="post">
-                    	
+                    
                       <div class="form-group">
                         <label for="exampleInputUsername1">Role Name</label>
                         <input type="text" class="form-control" id="exampleInputUsername1" placeholder="Enter Role Name" value="${role.roleName}" name="roleName"/>
@@ -28,9 +30,10 @@
                       <button class="btn btn-light" type="reset">Cancel</button>
                     </form>
                     
-                    <jsp:include page="AllJs.jsp"></jsp:include>
+                    
                   </div>
                 </div>
               </div>
+          <jsp:include page="AllJs.jsp"></jsp:include>
 </body>
 </html>

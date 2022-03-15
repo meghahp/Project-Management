@@ -7,10 +7,11 @@
 <head>
 <meta charset="ISO-8859-1">
 <jsp:include page="AllCss.jsp"></jsp:include>
-
+<link rel="stylesheet" type="text/css"
+	href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
 </head>
 <body>
-	<div class="container-scroller">
+	<!-- <div class="container-scroller">
 		<div class="row p-0 m-0 proBanner d-flex" id="proBanner">
 			<div class="col-md-12 p-0 m-0">
 				<div
@@ -47,7 +48,7 @@
 							<div class="card">
 
 								<div class="card-body">
-									<h4 class="card-title">Project Status</h4>
+									<h4 class="card-title">List User</h4>
 									<div class="dataTables_wrapper dt-bootstrap4">
 										<table id="listUser" class="table table-striped" border="1">
 											<thead>
@@ -107,7 +108,36 @@
 	</div>
 	<!-- container-scroller -->
 	<!-- plugins:js -->
-	<jsp:include page="AllJs.jsp"></jsp:include>
+	<script src="assets/vendors/js/vendor.bundle.base.js"></script>
+
+	<script src="assets/vendors/chart.js/Chart.min.js"></script>
+
+
+	<script src="assets/js/jquery.cookie.js" type="text/javascript"></script>
+
+	<script src="assets/js/hoverable-collapse.js"></script>
+
+	<script src="assets/js/misc.js"></script>
+
+
+	<script src="assets/js/dashboard.js"></script>
+
+	<script src="assets/js/todolist.js"></script>
+
+
+	<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+		crossorigin="anonymous"></script>
+
+	<script
+		src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"
+		crossorigin="anonymous"></script>
+
+	<script
+		src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap4.min.js"
+		crossorigin="anonymous"></script>
+	
 	<!-- End custom js for this page -->
 	<script type="text/javascript">
 		$(document).ready(function() {

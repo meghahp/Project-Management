@@ -7,6 +7,7 @@ import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
+import com.bean.ProjectBean;
 import com.bean.UserBean;
 
 @Repository
@@ -46,7 +47,11 @@ public void adduser(UserBean user) {
 
 		return user;
 	}
-	
+	public List<UserBean> getUserByRole(int roleId) {
+		// TODO Auto-generated method stub
+		return stmt.query("select u.*,r.rolename from users u,role r where u.roleid = r.roleid and u.roleid = ? ",
+				new BeanPropertyRowMapper<UserBean>(UserBean.class),new Object[] {roleId});
+	}
 	public void updateUser(UserBean user) {
 		System.out.println(user.getUserId());
 		System.out.println(user.getFirstName());

@@ -15,7 +15,7 @@ function openproject()
                 </div>
                 <div class="nav-profile-text d-flex flex-column">
                   <span class="font-weight-bold mb-2">${user.firstName }</span>
-                  <span class="text-secondary text-small">Admin</span>
+                  <span class="text-secondary text-small">Developer</span>
                 </div>
                 <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
               </a>
@@ -65,8 +65,6 @@ function openproject()
                   <li class="nav-item"> <a class="nav-link" href="projectreport?statusId=0"> Project </a></li>
                   <li class="nav-item"> <a class="nav-link" href="../../pages/samples/login.html"> Developer </a></li>
                   <li class="nav-item"> <a class="nav-link" href="../../pages/samples/register.html"> Task  </a></li>
-               	<li class="nav-item"> <a class="nav-link" href="userreport?roleId=0">User</a></li>
-                	
                 </ul>
               </div>
             </li>
