@@ -12,10 +12,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.bean.ModuleBean;
 import com.bean.ProjectBean;
+import com.bean.StatusBean;
 import com.bean.UserBean;
 import com.dao.ModuleDao;
 import com.dao.ProjectDao;
 import com.dao.RoleDao;
+import com.dao.StatusDao;
 
 @Controller
 public class ModuleController {
@@ -23,12 +25,16 @@ public class ModuleController {
 	ModuleDao moduleDao;
 	@Autowired
 	ProjectDao projectDao;
+	@Autowired
+	StatusDao statusDao;
 	
 	
 	@GetMapping("/newmodule")
 	public String newModule(Model model ) {
 		List<ProjectBean> project=projectDao.getAllProject();
+		List<StatusBean> status=statusDao.getAllStatus();
 		model.addAttribute("project",project);
+		model.addAttribute("status",status);
 		return  "NewModule";
 	}
 @PostMapping("/savemodule")

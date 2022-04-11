@@ -11,13 +11,13 @@
 </head>
 <body>
 	<form action="savetask" method="post">
-		Module id = <select name="module">
+		Module id = <select name="moduleId">
 			<option>Select Module</option>
 			<c:forEach items="${module}" var="m">
 			 <option value="${m.moduleId}"> ${m.moduleName}</option>
 			</c:forEach>
 		</select><br> 
-		Project id = <select name="projects">
+		Project id = <select name="projectId">
 			<option> select Project</option>
 			<c:forEach items="${project}" var="p">
 			 <option value="${p.projectId}"> ${p.projectTitle}</option>

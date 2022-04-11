@@ -15,6 +15,7 @@ import com.bean.ForgetBean;
 import com.bean.LoginBean;
 import com.bean.UserBean;
 import com.dao.UserDao;
+import com.service.EmailService;
 @Controller
 public class Sessioncontroller {
 	
@@ -22,6 +23,9 @@ public class Sessioncontroller {
 	UserDao userDao;
 	@Autowired
 	BCryptPasswordEncoder bcryptPasswordEncoder;
+	
+	@Autowired
+	EmailService emailService;
 	
 	@RequestMapping(value = "signup",method = RequestMethod.GET)
 	public String signup() {
@@ -63,10 +67,9 @@ public class Sessioncontroller {
 			model.addAttribute("msg", "Otp is generated and sent to your email!!!");
 			System.out.println("your otp is => " + otp);
 			/// send email to user
-
+			emailService.SendEmailForForgetPassword(user.getEmail(), otp + "");	
 			return "NewPassword";
 		}
-
 	}
 	@PostMapping("/updatepassword")
 	public String updatePassword(UserBean user, HttpSession session,Model model) {
@@ -146,6 +149,7 @@ public class Sessioncontroller {
 		session.invalidate();
 		return "redirect:/login";
 	}
+	
 	
 
 }

@@ -28,14 +28,16 @@ function openproject()
             </li>
             <li class="nav-item">
               <a class="nav-link collapsed" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-                <span class="menu-title">Lists</span>
+                <span class="menu-title" >Lists</span>
                 <i class="menu-arrow"></i>
               </a>
               <div class="collapse" id="ui-basic" style="">
                 <ul class="nav flex-column sub-menu">
-                  <li class="nav-item"> <a class="nav-link" href="listroles">List Role</a></li>
-                  <li class="nav-item"> <a class="nav-link" href="listproject">List Project</a></li>
-                  <li class="nav-item"> <a class="nav-link" href="getallusers">List User</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="listroles">Role</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="listproject">Project</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="getallusers">User</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="listtask">Task</a></li>
+                  
                 </ul>
               </div>
             </li>
@@ -63,9 +65,9 @@ function openproject()
               <div class="collapse" id="general-pages" style="">
                 <ul class="nav flex-column sub-menu">
                   <li class="nav-item"> <a class="nav-link" href="projectreport?statusId=0"> Project </a></li>
-                  <li class="nav-item"> <a class="nav-link" href="../../pages/samples/login.html"> Developer </a></li>
                   <li class="nav-item"> <a class="nav-link" href="../../pages/samples/register.html"> Task  </a></li>
-               	<li class="nav-item"> <a class="nav-link" href="userreport?roleId=0">User</a></li>
+               	  <li class="nav-item"> <a class="nav-link" href="userreport?roleId=0">User</a></li>
+               	  <li class="nav-item"> <a class="nav-link" href="modulereport?projectId=0">Module</a></li>
                 	
                 </ul>
               </div>

@@ -14,7 +14,7 @@ function openproject()
                   <!--change to offline or busy as needed-->
                 </div>
                 <div class="nav-profile-text d-flex flex-column">
-                  <span class="font-weight-bold mb-2">${user.firstName }</span>
+                  <span class="font-weight-bold mb-2">${user.firstName}</span>
                   <span class="text-secondary text-small">Developer</span>
                 </div>
                 <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
@@ -33,9 +33,9 @@ function openproject()
               </a>
               <div class="collapse" id="ui-basic" style="">
                 <ul class="nav flex-column sub-menu">
-                  <li class="nav-item"> <a class="nav-link" href="listroles">List Role</a></li>
-                  <li class="nav-item"> <a class="nav-link" href="listproject">List Project</a></li>
-                  <li class="nav-item"> <a class="nav-link" href="getallusers">List User</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="listroles">Role</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="listproject">Project</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="getallusers">User</a></li>
                 </ul>
               </div>
             </li>
@@ -63,8 +63,9 @@ function openproject()
               <div class="collapse" id="general-pages" style="">
                 <ul class="nav flex-column sub-menu">
                   <li class="nav-item"> <a class="nav-link" href="projectreport?statusId=0"> Project </a></li>
-                  <li class="nav-item"> <a class="nav-link" href="../../pages/samples/login.html"> Developer </a></li>
                   <li class="nav-item"> <a class="nav-link" href="../../pages/samples/register.html"> Task  </a></li>
+               	  <li class="nav-item"> <a class="nav-link" href="userreport?roleId=0">User</a></li>
+               	  <li class="nav-item"> <a class="nav-link" href="modulereport?projectId=0">Module</a></li>
                 </ul>
               </div>
             </li>

@@ -28,7 +28,7 @@
 	<td>${m.description}</td>
 	<td>${m.startDate}</td>
 	<td>${m.estimatedHours}</td>
-	<td>${m.status}</td>
+	<td>${m.statusName}</td>
 	<td><a href="deletemodule/${m.moduleId}">Delete</a> | 
 		<a href="editmodule?moduleId=${m.moduleId}">Edit</a>
 	</td>

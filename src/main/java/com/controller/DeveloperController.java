@@ -17,16 +17,24 @@ import com.dao.ProjectTeamDao;
 @Controller
 public class DeveloperController {
 	@Autowired
-	ProjectTeamDao projectteamDao;
+	ProjectTeamDao projectTeamDao;
+	@Autowired
+	ProjectDao projectDao;
 	
 	@GetMapping("/developerdashboard")
 	public String daveloperDashboard(HttpSession session, Model model)
 	{
 		UserBean user = (UserBean) session.getAttribute("user");
-			// projects
+		List<ProjectBean> projects = projectTeamDao.getProjectByUserId(user.getUserId());
+		model.addAttribute("totalProjects", projects.size());
 
-		List<ProjectBean> projects = projectteamDao.getProjectByUserId(user.getUserId());
-		model.addAttribute("totalDeveloper", projects.size());
+		List<UserBean> Developer = projectDao.getAllDeveloper();
+		model.addAttribute("totalDeveloper", Developer.size());
+
+		List<UserBean> projectmanager = projectDao.getAllPm();
+
+		model.addAttribute("totalprojectmanager", projectmanager.size());
+		
 		return "DeveloperDashboard";
 	}
 

@@ -15,8 +15,7 @@
 
                 <div class="card">
                   <div class="card-body">
-                    <h4 class="card-title">Default form</h4>
-                    <p class="card-description"> Basic form layout </p>
+                    <h4 class="card-title">Edit your Role</h4>
                     
                     <form class="forms-sample" action="updaterole" method="post">
                     

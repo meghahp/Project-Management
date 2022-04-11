@@ -37,5 +37,4 @@ public class ProjectTaskDao {
 		stmt.update("update task set title=?,priority=?,description=?,totalminutes=?  where taskid=? ",
 				task.getTitle(), task.getPriority(), task.getDescription(), task.getTotalMinutes(), task.getTaskId());
 	}
-
 }

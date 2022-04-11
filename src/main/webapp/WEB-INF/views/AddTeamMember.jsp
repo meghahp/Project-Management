@@ -12,15 +12,16 @@
 
 </head>
 <body>
-<jsp:include page="AdminHeader.jsp"></jsp:include>
-<jsp:include page="AdminSideBar.jsp"></jsp:include>
+
 
 <div class="card">
 
-                  <div class="card-body">
-                  
-                    <h4 class="card-title">Basic form elements</h4>
-                    <p class="card-description"> Basic form elements </p>
+				<jsp:include page="AdminHeader.jsp"></jsp:include>
+				<div class="container-fluid page-body-wrapper pt-0">
+				<jsp:include page="AdminSideBar.jsp"></jsp:include>
+                  <div class="card-body">                  	
+                    <h4 class="card-title">Add Team Member</h4>
+                    
                     <form class="forms-sample" action="saveteammembers" method="post">
                       <div class="form-group">
                       
@@ -53,6 +54,7 @@
                      <button type="submit" class="btn btn-gradient-primary me-2">Submit</button>
                       <button class="btn btn-light" type="reset">Cancel</button>
                     </form>
+                  </div>
                   </div>
                 </div>
 </body>

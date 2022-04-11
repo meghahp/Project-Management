@@ -8,11 +8,13 @@
 <jsp:include page="AllCss.jsp"></jsp:include>
 </head>
 <body>
+<jsp:include page="AdminHeader.jsp"></jsp:include>
 <div class="col-md-6 grid-margin stretch-card">
+<jsp:include page="AdminSideBar.jsp"></jsp:include>
                 <div class="card">
                   <div class="card-body">
-                    <h4 class="card-title">Default form</h4>
-                    <p class="card-description"> Basic form layout </p>
+                    <h4 class="card-title">Edit User</h4>
+               
                     <form class="forms-sample" action="updateuser" method="post">
                     
                       <div class="form-group">

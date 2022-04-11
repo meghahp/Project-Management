@@ -17,7 +17,7 @@
 					<div class="col-lg-4 mx-auto">
 						<div class="auth-form-light text-left p-5">
 							<div class="brand-logo">
-								<h2 style="color: #B66DFF;">SIGN UP</h2>
+								<h2 style="color: #425061;">SIGN UP</h2>
 							</div>
 							<h4>WELCOME</h4>
 							<h6 class="font-weight-light">Please fill in this form to
@@ -43,7 +43,7 @@
 								</div> -->
 								
 								<div class="form-group">
-									<select name="statusId" class="form-control form-control-lg">
+									<select name="roleId" class="form-control form-control-lg">
 
 										<c:forEach items="${roles}" var="r">
 											<option value="${r.roleId}">${r.roleName}</option>
@@ -65,7 +65,7 @@
 									</button>
 								</div>
 								<div class="text-center mt-4 font-weight-light">
-									Already have an account? <a href="login.html"
+									Already have an account? <a href="login"
 										class="text-primary">Login</a>
 								</div>
 							</form>

@@ -1,7 +1,7 @@
 		<nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 d-flex flex-row mt-3" style="padding-top: 0px !important;">
 
         <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-          <h3 font color="#343A40">Project Management</h3>
+          <h3 style="color:#A15BFF;">Project Management</h3>
           <a class="navbar-brand brand-logo-mini" href="index.html"><img src="assets/images/logo-mini.svg" alt="logo"></a>
         </div>
         <div class="navbar-menu-wrapper d-flex align-items-stretch">

@@ -14,7 +14,7 @@
 					<div class="col-lg-4 mx-auto">
 						<div class="auth-form-light text-left p-5">
 							<div class="brand-logo">
-								<h2 style="color: #B66DFF;">LOGIN HERE</h2>
+								<h2 style="color: #425061;">LOGIN HERE</h2>
 							</div>
 							<h4>Hello! let's get started</h4>
 							<h6 class="font-weight-light">Sign in to continue.</h6>
@@ -30,20 +30,24 @@
 
 								</div>
 								<div class="mt-3">
-									<button class="btn btn-gradient-primary btn-lg btn-block"
+							<button class="btn btn-gradient-primary btn-lg btn-block"
 										type="submit">
-										<i class="mdi mdi-account"></i> SIGN IN
+										<i class="mdi mdi-account"></i> SIGN UP
 									</button>
 								</div>
-								<div1
+								<div
 									class="my-2 d-flex justify-content-between align-items-center">
 								<div class="form-check">
 									<label class="form-check-label text-muted"> <input
 										type="checkbox" class="form-check-input"> Keep me
 										signed in <i class="input-helper"></i></label>
 								</div>
-								<a href="#" class="auth-link text-black">Forgot password?</a>
-						</div>
+								<div class="text-center mt-4 font-weight-light">
+									 <a href="forgetpassword"
+										class="text-primary">Forgot Password</a>
+								</div>
+<!-- 								<a href="forgetpassword" class="auth-link text-black">Forgot password?</a>
+ -->						</div>
 
 						<div class="text-center mt-4 font-weight-light">
 							Don't have an account? <a href="newuser"

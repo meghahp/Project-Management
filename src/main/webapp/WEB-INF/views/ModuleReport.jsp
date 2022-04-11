@@ -8,6 +8,7 @@
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 <jsp:include page="AllCss.jsp"></jsp:include>
+
 </head>
 <body>
 	<!-- <div class="container-scroller">
@@ -33,7 +34,7 @@
 							<i class="mdi mdi-home"></i>
 						</span> All Users
 					</h3>
-					
+
 				</div>
 				<div class="row">
 					<div class="col-lg-12 grid-margin stretch-card">
@@ -41,35 +42,34 @@
 
 							<div class="card-body">
 								<button type="button" class="btn btn-primary"
-									data-toggle="modal" data-target="#exampleModal">Roles</button>
+									data-toggle="modal" data-target="#exampleModal">Modules</button>
 								<button class="btn" onclick="exportPdf()">Export</button>
-																<div class="dataTables_wrapper dt-bootstrap4">
+								<div class="dataTables_wrapper dt-bootstrap4">
 
-									<table id="listUser" class="table table-striped" border="1">
+									<table id="listModules" class="table table-striped" border="1">
 
 										<thead>
 											<tr>
-												<td>UserId</td>
-												<td>FirstName</td>
-												<td>Email</td>
-	
-												<td>RoleId</td>
-												
+												<td>ModuleId</td>
+												<td>ModuleName</td>
+												<td>Description</td>
+												<td>EstimatedHours</td>
+												<td>ProjectTitle</td>
+												<td>Status</td>
 											</tr>
 
 										</thead>
 										<tbody>
-											<c:forEach items="${users}" var="u">
+											<c:forEach items="${modules}" var="pm">
 												<tr>
-													<td>${u.userId}</td>
-													<td>${u.firstName}</td>
-													<td>${u.email}</td>
-													
-													<td>${u.roleName}</td>
-													
+													<td>${pm.moduleId}</td>
+													<td>${pm.moduleName}</td>
+													<td>${pm.description}</td>
+													<td>${pm.estimatedHours}</td>
+													<td>${pm.projectTitle}</td>
+													<td>${pm.status}</td>
 												</tr>
 											</c:forEach>
-
 										</tbody>
 									</table>
 								</div>
@@ -112,26 +112,24 @@
 					</button>
 				</div>
 				<div class="modal-body">
-					<form action="userreport" method="get">
+					<form action="modulereport">
 						<div class="form-group row">
-							<label class="col-sm-2 col-form-label">Select Roles </label>
+							<label class="col-sm-2 col-form-label">Select Project </label>
 							<div class="col-sm-10">
-								<select name="roleId" class="form-control">
-
-									<c:forEach items="${role}" var="r">
-										<option value="${r.roleId}">${r.roleName}</option>
+								<select name="projectId" class="form-control">
+									<c:forEach items="${projects}" var="s">
+										<option value="${s.projectId}">${s.projectTitle}</option>
 									</c:forEach>
-
 								</select>
 							</div>
 						</div>
-				
-				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary"
-						data-dismiss="modal">Close</button>
-					<button type="submit" class="btn btn-primary">Generate</button>
-				</div>
-				</form>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary"
+								data-dismiss="modal">Close</button>
+							<button type="submit" class="btn btn-primary">Save
+								changes</button>
+						</div>
+					</form>
 				</div>
 			</div>
 		</div>
@@ -175,18 +173,16 @@
 
 	<script type="text/javascript">
 		function exportPdf() {
-			const element = document.getElementById('listUser');
+			const element = document.getElementById('listModules');
 			var opt = {
 				margin : 1,
-				filename : 'Report_user.pdf',
+				filename : 'Report.pdf',
 				image : {
 					type : 'jpeg',
 					quality : 0.98
-
 				},
 				html2canvas : {
 					scale : 1
-
 				},
 				jsPDF : {
 					unit : 'in',

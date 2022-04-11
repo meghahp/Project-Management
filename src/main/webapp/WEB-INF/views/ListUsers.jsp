@@ -32,14 +32,11 @@
 						<h3 class="page-title">
 							<span class="page-title-icon bg-gradient-primary text-white me-2">
 								<i class="mdi mdi-home"></i>
-							</span> Dashboard
+							</span>List Users
 						</h3>
 						<nav aria-label="breadcrumb">
 							<ul class="breadcrumb">
-								<li class="breadcrumb-item active" aria-current="page"><span></span>Overview
-									<i
-									class="mdi mdi-alert-circle-outline icon-sm text-primary align-middle"></i>
-								</li>
+								
 							</ul>
 						</nav>
 					</div>
@@ -48,7 +45,7 @@
 							<div class="card">
 
 								<div class="card-body">
-									<h4 class="card-title">List User</h4>
+									<h4 class="card-title"></h4>
 									<div class="dataTables_wrapper dt-bootstrap4">
 										<table id="listUser" class="table table-striped" border="1">
 											<thead>

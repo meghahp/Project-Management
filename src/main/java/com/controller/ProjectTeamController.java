@@ -28,7 +28,6 @@ public class ProjectTeamController {
 
 	@GetMapping("/addteammember")
 	public String addTeamMember(@RequestParam("projectId") int projectId, Model model) {
-
 		model.addAttribute("users", projectTeamDao.getUsersForProject(projectId));
 		model.addAttribute("project", projectDao.getProjectById(projectId));
 		model.addAttribute("team", projectTeamDao.getTeamMembers(projectId));
@@ -45,21 +44,15 @@ public class ProjectTeamController {
 		}
 		return "redirect:/viewteam?projectId=" + projectId;
 	}
-
 	@GetMapping("/removemember")	
 	public String removeMember(@RequestParam("projectId") int projectId,@RequestParam("userId") int userId) {
 		projectTeamDao.removeTeamMember(projectId,userId);
 		return "redirect:/viewteam?projectId=" + projectId;
 		
 	}
-
 	@GetMapping("/reassignmember")
 	public String reassignMember(@RequestParam("projectId") int projectId,@RequestParam("userId") int userId) {
 		projectTeamDao.reassignTeamMember(projectId,userId);
 		return "redirect:/viewteam?projectId=" + projectId;
 	}
-	
-	
-	
-
 }

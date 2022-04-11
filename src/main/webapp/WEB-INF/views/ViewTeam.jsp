@@ -35,20 +35,24 @@
 							<td>${t.firstName}</td>
 							<td>${t.email}</td>
 							<td>${t.roleName}</td>
-							<td><c:if test="${t.active == 1 }">
+							<td><a href="">Delete</a> 
+							<a href="">Edit</a></td>
+							<td>
+							<c:if test="${t.active == 1 }">
 									Active
-								</c:if> <c:if test="${t.active == 0 }">
+								</c:if> 
+								<c:if test="${t.active == 0 }">
 									InActive
 									</c:if>
 							</td>
 							<td>
 							<c:if test="${t.active == 1 }">
-									<a
-										href="removemember?projectId=${t.projectId}&userId=${t.userId}">Revoke</a>
+									<a href="removemember?projectId=${t.projectId}&userId=${t.userId}">
+									Revoke</a>
 								</c:if> 
 								<c:if test="${t.active == 0 }">
-									<a
-										href="reassignmember?projectId=${t.projectId}&userId=${t.userId}">ReAssign</a>
+									<a href="reassignmember?projectId=${t.projectId}&userId=${t.userId}">
+									ReAssign</a>
 								</c:if>
 								</td>
 						</tr>

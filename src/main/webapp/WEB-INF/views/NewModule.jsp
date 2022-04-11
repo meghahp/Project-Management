@@ -20,7 +20,12 @@
 	Description:<input type="text" name="description"><br><br>
 	Start Date:<input type="text" name="startDate"><br><br>
 	Estimated Hours:<input type="number" name="estimatedHours"><br><br>
-	Status:<input type="text" name="status"><br><br>
+	Select Status:<select name="statusId">
+		 		<option>Select Status</option>
+		 		<c:forEach items="${status}" var="s">
+		 			<option value="${s.statusId}">${s.statusName}</option>
+				</c:forEach>
+	</select><br><br> 
 	
 	<input type="submit" value="Add Module"/>
 </form>

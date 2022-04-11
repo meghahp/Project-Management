@@ -17,7 +17,7 @@ public class ProjectTeamDao {
 	@Autowired
 	JdbcTemplate stmt;
 	public List<ProjectTeamBean> getTeamMembers(int projectId){
-		return stmt.query("select p.projecttitle,u.*,r.rolename,pt.active from projectteam pt,users u,project p,role r  where pt.userid = u.userid and pt.projectid = ? and u.roleid = r.roleid", new BeanPropertyRowMapper<ProjectTeamBean>(ProjectTeamBean.class),new Object[] {projectId}); 
+		return stmt.query(" select pt.*,u.*,p.projecttitle,r.rolename from projectteam pt,users u,role r,project p  where pt.projectid = ?  and u.userid = pt.userid and r.roleid = u.roleid and p.projectid = pt.projectid", new BeanPropertyRowMapper<ProjectTeamBean>(ProjectTeamBean.class),new Object[] {projectId}); 
 	}
 	public List<UserBean> getUsersForProject(int projectId) {
 		return stmt.query(
@@ -35,7 +35,6 @@ public class ProjectTeamDao {
 		return stmt.query("select * from project where projectid in (select projectid from projectteam where userid = ? and active = 1  )",new BeanPropertyRowMapper<ProjectBean>(ProjectBean.class),new Object[] {userId});
 	}
 	public void reassignTeamMember(int projectId, int userId) {
-		// TODO Auto-generated method stub	
 		stmt.update("update projectteam set active = 1 where userid = ? and projectid = ? ",userId,projectId);		
 	}
 } 	

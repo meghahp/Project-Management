@@ -33,9 +33,9 @@ function openproject()
               </a>
               <div class="collapse" id="ui-basic" style="">
                 <ul class="nav flex-column sub-menu">
-                  <li class="nav-item"> <a class="nav-link" href="listroles">List Role</a></li>
-                  <li class="nav-item"> <a class="nav-link" href="listproject">List Project</a></li>
-                  <li class="nav-item"> <a class="nav-link" href="getallusers">List User</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="listroles"> Role</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="listproject"> Project</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="getallusers"> User</a></li>
                 </ul>
               </div>
             </li>

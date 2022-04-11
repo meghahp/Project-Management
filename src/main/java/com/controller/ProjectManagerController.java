@@ -22,11 +22,17 @@ public class ProjectManagerController {
 	public String projectmanagerDashboard(HttpSession session, Model model)
 	{
 		UserBean user = (UserBean) session.getAttribute("user");
-
-		// projects
-
 		List<ProjectBean> projects = projectDao.getAllProject();
-		model.addAttribute("totalProjectManager", projects.size());
+		
+		model.addAttribute("totalProjects", projects.size());
+
+		List<UserBean> Developer = projectDao.getAllDeveloper();
+		model.addAttribute("totalDeveloper", Developer.size());
+
+		List<UserBean> projectmanager = projectDao.getAllPm();
+
+		model.addAttribute("totalProjectManager", projectmanager.size());
+		
 		return "ProjectManagerDashboard";
 	}
 
